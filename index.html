@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>CRUD - Tamara Utami Amri</title>
+</head>
+<body onload="getData()">
+    <div class="container text-bg-dark p-3">
+        <h1>KATALOG PRODUK</h1>
+        <!-- Form untuk menginput data dan langsung berada pada halaman awal -->
+        <form class="mb-3">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" class="form-control" id="price">
+            </div>
+            <div class="mb-3">
+                <label for="descriptions" class="form-label">Descriptions</label>
+                <input type="text" class="form-control" id="descriptions">
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <input type="text" class="form-control" id="category">
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image</label>
+                <input type="text" class="form-control" id="image">
+            </div>
+            <button onclick="postData(event)" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="result" class="d-flex flex-wrap justify-content-around">
+        </div>
+
+        <!-- Modal untuk saat menampilkan detai pada data -->
+        <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content text-bg-dark">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Product</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="getData()"></button>
+                </div>
+                <div class="modal-body" id="resultModal">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal untuk mengubah data -->
+        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content text-bg-dark">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Update Product</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="getData()"></button>
+                </div>
+                <div class="modal-body" id="resultUpdate">
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script src="index.js"></script>
+<script src="https://kit.fontawesome.com/38a681d7d7.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</html>
